@@ -13,8 +13,6 @@ public class Billionaire {
     private long id;
     @NotBlank(message = "Name is mandatory")
     private String name;
-    @NotNull(message = "Rank cannot be null")
-    private int rank;
     @NotNull(message = "NetWorth cannot be null")
     private Double networth;
     @NotBlank(message = "companiesowned cannot be empty")
@@ -22,10 +20,9 @@ public class Billionaire {
 
    public Billionaire(){}
 
-    public Billionaire(long id, @NotBlank(message = "Name is mandatory") String name, @NotNull(message = "Rank cannot be null") int rank, @NotNull(message = "NetWorth cannot be null") Double networth, @NotBlank(message = "companiesowned cannot be empty") String compainesowned) {
+    public Billionaire(long id, @NotBlank(message = "Name is mandatory") String name,@NotNull(message = "NetWorth cannot be null") Double networth, @NotBlank(message = "companiesowned cannot be empty") String compainesowned) {
         this.id = id;
         this.name = name;
-        this.rank = rank;
         this.networth = networth;
         this.companiesowned = compainesowned;
     }
@@ -44,14 +41,6 @@ public class Billionaire {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getRank() {
-        return rank;
-    }
-
-    public void setRank(int rank) {
-        this.rank = rank;
     }
 
     public Double getNetworth() {
@@ -75,7 +64,6 @@ public class Billionaire {
         return "Billionaires{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", rank=" + rank +
                 ", networth=" + networth +
                 ", compainesowned='" + companiesowned + '\'' +
                 '}';

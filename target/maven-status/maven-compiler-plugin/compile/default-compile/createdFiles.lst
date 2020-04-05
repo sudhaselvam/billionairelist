@@ -1,0 +1,4 @@
+com\targettech\springboot\crud\billionaireslist\entities\Billionaire.class
+com\targettech\springboot\crud\billionaireslist\BillionaireApplication.class
+com\targettech\springboot\crud\billionaireslist\repositories\BillionaireRepository.class
+com\targettech\springboot\crud\billionaireslist\controllers\BillionairesController.class
