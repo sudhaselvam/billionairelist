@@ -17,14 +17,17 @@ public class Billionaire {
     private Double networth;
     @NotBlank(message = "companiesowned cannot be empty")
     private String companiesowned;
+    @NotBlank(message = "image may not be empty")
+    private String image;
 
    public Billionaire(){}
 
-    public Billionaire(long id, @NotBlank(message = "Name is mandatory") String name,@NotNull(message = "NetWorth cannot be null") Double networth, @NotBlank(message = "companiesowned cannot be empty") String compainesowned) {
+    public Billionaire(long id, @NotBlank(message = "Name is mandatory") String name, @NotNull(message = "NetWorth cannot be null") Double networth, @NotBlank(message = "companiesowned cannot be empty") String companiesowned, @NotBlank(message = "image may not be empty") String image) {
         this.id = id;
         this.name = name;
         this.networth = networth;
-        this.companiesowned = compainesowned;
+        this.companiesowned = companiesowned;
+        this.image = image;
     }
 
     public long getId() {
@@ -59,13 +62,22 @@ public class Billionaire {
         this.companiesowned = companiesowned;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
-        return "Billionaires{" +
+        return "Billionaire{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", networth=" + networth +
-                ", compainesowned='" + companiesowned + '\'' +
+                ", companiesowned='" + companiesowned + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
 }

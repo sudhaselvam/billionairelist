@@ -14,8 +14,9 @@
     <h2 class="mb-5">New Billionaire</h2>
     <div class="row">
         <div class="col-md-8">
-            <form action="#" th:action="@{/addBillionaire}" th:object="${billionaire}" method="post">
+            <form action="#" th:action="@{/addBillionaire}" th:object="${billionaire}" method="post" >
                 <div class="row">
+
                     <div class="form-group col-md-8">
                         <label for="name" class="col-form-label">Name</label>
                         <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name">
@@ -30,6 +31,11 @@
                         <label for="companiesowned" class="col-form-label">CompaniesOwned</label>
                         <input type="text" th:field="*{companiesowned}" class="form-control" id="companiesowned" placeholder="companiesowned">
                         <span th:if="${#fields.hasErrors('companiesowned')}" th:errors="*{companiesowned}" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="image" class="col-form-label">Image</label>
+                        <input type="text" th:field="*{image}" class="form-control" id="image" placeholder="image">
+                        <span th:if="${#fields.hasErrors('image')}" th:errors="*{image}" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="row">
